@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import org.jspecify.annotations.NonNull;
 
-public record StationaryWeapon(
+public record MapStationaryWeapon(
         @JsonProperty(value = "position", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull StationaryWeaponPosition position,
         @JsonProperty(value = "stationaryWeapon", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull String stationaryWeapon
 ) {

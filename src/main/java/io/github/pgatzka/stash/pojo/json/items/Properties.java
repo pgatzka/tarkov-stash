@@ -126,8 +126,8 @@ public record Properties(
         @JsonProperty(value = "units") @Nullable Integer units,
         @JsonProperty(value = "useTime") @Nullable Integer useTime,
         @JsonProperty(value = "uses") @Nullable Integer uses,
-        @JsonProperty(value = "zeroingDistances") int @Nullable [] @NonNull [] zeroingDistances,
+        @JsonProperty(value = "zeroingDistances") int @NonNull [] @Nullable [] zeroingDistances,
         @JsonProperty(value = "zones") @NonNull String @Nullable [] zones,
-        @JsonProperty(value = "zoomLevels") double @Nullable [] @NonNull [] zoomLevels
+        @JsonProperty(value = "zoomLevels") double @NonNull [] @Nullable [] zoomLevels
 ) {
 }

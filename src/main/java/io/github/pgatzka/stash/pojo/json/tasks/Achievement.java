@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import org.jspecify.annotations.NonNull;
 
-public record DataAchievements2(
+public record Achievement(
         @JsonProperty(value = "adjustedPlayersCompletedPercent", required = true) @JsonSetter(nulls = Nulls.FAIL) double adjustedPlayersCompletedPercent,
         @JsonProperty(value = "description", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull String description,
         @JsonProperty(value = "hidden", required = true) @JsonSetter(nulls = Nulls.FAIL) boolean hidden,

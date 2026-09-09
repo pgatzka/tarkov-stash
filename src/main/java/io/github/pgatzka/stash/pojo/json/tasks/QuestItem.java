@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import org.jspecify.annotations.NonNull;
 
-public record DataQuestItems2(
+public record QuestItem(
         @JsonProperty(value = "baseImageLink", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull String baseImageLink,
         @JsonProperty(value = "description", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull String description,
         @JsonProperty(value = "gridImageLink", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull String gridImageLink,

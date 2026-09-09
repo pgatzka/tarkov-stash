@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import org.jspecify.annotations.NonNull;
 
-public record DataArmorMaterials2(
+public record ArmorMaterial(
         @JsonProperty(value = "destructibility", required = true) @JsonSetter(nulls = Nulls.FAIL) double destructibility,
         @JsonProperty(value = "explosionDestructibility", required = true) @JsonSetter(nulls = Nulls.FAIL) double explosionDestructibility,
         @JsonProperty(value = "id", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull String id,

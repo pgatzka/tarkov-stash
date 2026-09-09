@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import org.jspecify.annotations.NonNull;
 
-public record LootContainer(
+public record MapLootContainer(
         @JsonProperty(value = "lootContainer", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull String lootContainer,
         @JsonProperty(value = "position", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull LootContainerPosition position
 ) {
