@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import org.jspecify.annotations.NonNull;
 
-public record TraderData2(
+public record Data(
         @JsonProperty(value = "buyAllowed", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull BuyAllowed buyAllowed,
         @JsonProperty(value = "buyProhibited", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull BuyProhibited buyProhibited,
         @JsonProperty(value = "currency", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull String currency,

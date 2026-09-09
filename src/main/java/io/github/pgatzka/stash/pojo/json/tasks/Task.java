@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.Nulls;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
-public record DataTasks2(
+public record Task(
         @JsonProperty(value = "availableDelaySecondsMax") @Nullable Integer availableDelaySecondsMax,
         @JsonProperty(value = "availableDelaySecondsMin") @Nullable Integer availableDelaySecondsMin,
         @JsonProperty(value = "experience", required = true) @JsonSetter(nulls = Nulls.FAIL) int experience,

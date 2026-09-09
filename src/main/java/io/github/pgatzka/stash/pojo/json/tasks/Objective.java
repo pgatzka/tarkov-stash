@@ -36,7 +36,7 @@ public record Objective(
         @JsonProperty(value = "playerHealthEffect") @Nullable PlayerHealthEffect playerHealthEffect,
         @JsonProperty(value = "possibleLocations") @NonNull PossibleLocation @Nullable [] possibleLocations,
         @JsonProperty(value = "questItem") @Nullable String questItem,
-        @JsonProperty(value = "requiredKeys") @NonNull String @Nullable [] @NonNull [] requiredKeys,
+        @JsonProperty(value = "requiredKeys") @NonNull String @NonNull [] @Nullable [] requiredKeys,
         @JsonProperty(value = "shotType") @Nullable String shotType,
         @JsonProperty(value = "skill") @Nullable String skill,
         @JsonProperty(value = "status") @NonNull String @Nullable [] status,
@@ -49,9 +49,9 @@ public record Objective(
         @JsonProperty(value = "type", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull String type,
         @JsonProperty(value = "useAny") @NonNull String @Nullable [] useAny,
         @JsonProperty(value = "usingWeapon") @NonNull String @Nullable [] usingWeapon,
-        @JsonProperty(value = "usingWeaponMods") @NonNull String @Nullable [] @NonNull [] usingWeaponMods,
+        @JsonProperty(value = "usingWeaponMods") @NonNull String @NonNull [] @Nullable [] usingWeaponMods,
         @JsonProperty(value = "value") @Nullable Integer value,
-        @JsonProperty(value = "wearing") @NonNull Wearing @Nullable [] @NonNull [] wearing,
+        @JsonProperty(value = "wearing") @NonNull Wearing @NonNull [] @Nullable [] wearing,
         @JsonProperty(value = "zones") @NonNull ObjectiveZone @Nullable [] zones
 ) {
 }

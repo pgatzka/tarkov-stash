@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.Nulls;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
-public record DataItems2(
+public record Item(
         @JsonProperty(value = "accuracyModifier") @Nullable Integer accuracyModifier,
         @JsonProperty(value = "ammoType") @Nullable String ammoType,
         @JsonProperty(value = "armorClass") @Nullable String armorClass,

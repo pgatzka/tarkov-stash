@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.Nulls;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
-public record DataMobs2(
+public record Mob(
         @JsonProperty(value = "equipment", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull Equipment @NonNull [] equipment,
         @JsonProperty(value = "health") @NonNull Health @Nullable [] health,
         @JsonProperty(value = "id", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull String id,

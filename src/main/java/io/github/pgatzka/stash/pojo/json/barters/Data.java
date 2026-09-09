@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.Nulls;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
-public record Barter(
+public record Data(
         @JsonProperty(value = "buyLimit", required = true) @JsonSetter(nulls = Nulls.FAIL) int buyLimit,
         @JsonProperty(value = "id", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull String id,
         @JsonProperty(value = "minTraderLevel", required = true) @JsonSetter(nulls = Nulls.FAIL) int minTraderLevel,

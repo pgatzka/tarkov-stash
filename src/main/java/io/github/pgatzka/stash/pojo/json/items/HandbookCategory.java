@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.Nulls;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
-public record DataHandbookCategories2(
+public record HandbookCategory(
         @JsonProperty(value = "children", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull String @NonNull [] children,
         @JsonProperty(value = "id", required = true) @JsonSetter(nulls = Nulls.FAIL) @NonNull String id,
         @JsonProperty(value = "imageLink") @Nullable String imageLink,
