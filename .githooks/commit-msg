@@ -1,0 +1,8 @@
+#!/bin/sh
+
+commit_message_file="$1"
+normalized_message=$(mktemp)
+
+sed -e 's/[[:space:]]*$//' -e '/^#/!s/.*/\L&/' "$commit_message_file" > "$normalized_message"
+
+mv "$normalized_message" "$commit_message_file"
