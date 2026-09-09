@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!--
+      A test run's output is thousands of lines of Testcontainers and Spring startup,
+      which on stdout buries the one line that says why a test failed. It goes to a
+      file instead, and CI keeps that file as an artifact.
+
+      No SQL logging: turning org.hibernate.SQL on is a temporary debugging step and
+      never something a run does by default - a chunked load emits a line per row.
+    -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <appender name="file" class="ch.qos.logback.core.FileAppender">
+        <file>target/test.log</file>
+        <append>false</append>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %5p --- [%15.15t] [%X{requestId:-}] %-40.40logger{39} : %m %kvp%n%wEx</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="file"/>
+    </root>
+</configuration>
